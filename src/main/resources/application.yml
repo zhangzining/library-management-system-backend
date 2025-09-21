@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: LibrarySystem
+
+  profiles:
+    active: dev-lite
+
+  jackson:
+    default-property-inclusion: non_null
+
+  servlet:
+    multipart:
+      max-request-size: 20MB
+      max-file-size: 10MB
+      file-size-threshold: 10MB
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+
+app:
+  client_id: ${CLIENT_ID}
+  raw_client_secret: ${RAW_CLIENT_SECRET}
+  access_token_duration_hours: 10
+  refresh_token_duration_hours: 120
+
+book:
+  import:
+    image_storage_dir: image
+  default_borrowing_month: 3
+
+
